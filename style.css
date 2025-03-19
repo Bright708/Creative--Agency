@@ -345,6 +345,7 @@ header ul a:active {
   color: white;
   background-color: black;
   border-radius: 50px;
+  border: none;
 }
 .word_experience2 .btn:hover,
 .word_experience2 .btn:focus {
@@ -386,26 +387,58 @@ header ul a:active {
 }
 .customers .testimony p {
   padding-top: 2rem;
-
 }
 
-.customers .testimony img{
-  width:200px;
+.customers .testimony img {
+  width: 200px;
   height: 190px;
   padding-left: 2rem;
   padding-top: 2rem;
 }
-.customers .testimony h2{
+.customers .testimony h2 {
   position: absolute;
   right: 13rem;
   top: 8rem;
-
 }
-.customers .testimony footer{
+.customers .testimony footer {
   position: absolute;
   right: 14.5rem;
   top: 12rem;
   font-size: 1.2rem;
   opacity: 70%;
-
+}
+.ideas {
+  height: 80vh;
+  width: 100%;
+  position: relative;
+  background-image: url(img/10335434.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.ideas article {
+  position: absolute;
+  left: 8rem;
+  display: flex;
+  flex-flow: column wrap;
+  row-gap: 3rem;
+}
+.ideas h1 {
+  font-size: 3.2rem;
+}
+.ideas p {
+  font-size: 1.5rem;
+}
+.ideas input{
+  border: none;
+  height: 3.5rem;
+  width: 13rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+  border-radius: 25px;
+  background-color: black;
+}
+.ideas input:hover ,.ideas input:focus{
+background-color: #e5521d;
 }
