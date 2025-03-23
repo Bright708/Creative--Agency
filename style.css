@@ -17,6 +17,8 @@ section {
   overflow: hidden;
   word-wrap: break-word; */
 }
+
+  
 header {
   display: flex;
   flex-flow: row nowrap;
@@ -88,20 +90,36 @@ header ul a:active {
 .strategypage {
   /* min-height: 120vh;
   width:max(100% ,550px); */
-  /*  display: flex;
-    justify-content: center;
-    align-items: center; */
-  min-height: 100vh;
-  min-height: 100%;
+   display: flex;
+flex-flow: column wrap;
+  min-height: 75vh;
+ min-width: 100%;
   margin-bottom: 2rem;
+
 }
 .strategypage h1 {
   font-size: 3rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-flow: row wrap;
-  flex-shrink: 1;
+  animation: strategy_header 3s forwards;
+
+ 
+}
+@keyframes strategy_header{
+  0%{
+    transform: translateY(-30rem);
+    opacity: 0.3;
+  }
+  50%{
+    transform: translateY(1rem);
+    opacity: 0.8;
+  }
+  100%{
+    transform: translateY(0);
+
+  }
+
 }
 .strategypage .strategie {
   height: 20rem;
@@ -121,30 +139,71 @@ header ul a:active {
   border-radius: 25px;
   padding: 1rem;
 }
+@keyframes friendly{
+  0%{
+    transform: scale(0 ,0);
+  }
+  50%{
+    transform: scale(1 ,1);
+  }
+    
+/* 100%{
+    transform: scale(1 ,1);
+
+  } */
+}
 .strategypage .strategy:hover {
   box-shadow: 1px 1px 8px;
   transform: scaleX(1.2);
 }
 .strategypage .first_1 {
   background-color: whitesmoke;
+  animation: whitee 2s forwards;
 }
 .strategypage .second_2 {
   background-color: #2abbca;
   color: whitesmoke;
+  animation: friendly 2s forwards;
 }
 .strategypage .third_3 {
   background-color: #e5521d;
   color: whitesmoke;
+  animation: friendly 2s forwards;
 }
 .strategypage .fourth_4 {
   background-color: whitesmoke;
+  animation: whiteee 2s forwards;
+
 }
 .strategypage .strategy1 a {
   color: black;
+  
 }
 .strategypage .strategy2 a {
   color: whitesmoke;
 }
+@keyframes whitee{
+  0%{
+    transform: translateX(-40rem) ;
+    transform:scale(0 0);
+  }
+  50%{
+    transform: translateX(0);
+    transform:scale(1 1 );
+  }
+}
+@keyframes whiteee{
+  0%{
+    transform: translateX(20rem) ;
+    transform:scale(0 0);
+  }
+  50%{
+    transform: translateX(0);
+    transform:scale(1 1 );
+  }
+}
+
+
 .capabilities {
   height: 95vh;
   width: 100%;
@@ -156,6 +215,19 @@ header ul a:active {
   justify-content: center;
   align-items: center;
   flex-flow: column wrap;
+  animation: capabilities_header 3s forwards;
+}
+@keyframes capabilities_header{
+  0%{
+    transform: translateY(-40rem);
+    opacity: 0.3;
+    
+    
+  }
+  50%{
+    transform: translateY(0rem);
+    opacity: 1;
+  }
 }
 .capabilities .header h1 {
   font-size: 3rem;
@@ -181,10 +253,36 @@ header ul a:active {
   background-color: rgb(255, 255, 255);
   padding: 2rem;
   position: relative;
+  animation: capabilities_brands 2.5s forwards;
+}
+@keyframes capabilities_brands{
+  0%{
+    transform: scale(0,0);
+  }
+  100%{
+    transform: scale(1,1);
+  }
+}
+@keyframes capabilities_img_p{
+  0%{
+    transform:translateX(20rem);
+    opacity: 0.1;
+    
+  }
+  100%{
+    transform:translateX(0);
+    opacity: 1;
+   
+  }
 }
 .capabilities .brands ul li {
   font-size: 1.2rem;
-  padding-left: ;
+  animation: capabilities_img_p 3s forwards;
+
+}
+.capabilities .brands img {
+  animation: capabilities_brands 3s forwards;
+
 }
 .capabilities .brands ul {
   position: absolute;
@@ -198,6 +296,7 @@ header ul a:active {
   color: #e5521d;
   font-weight: lighter;
   font-size: 2rem;
+  animation: capabilities_img_p 3s forwards;
 }
 .capabilities .header a {
   color: white;
@@ -241,6 +340,15 @@ header ul a:active {
   position: absolute;
   top: 90px;
   left: 200px;
+  animation: aboutus_p 2s forwards;
+}
+@keyframes aboutus_p{
+  0%{
+    transform: translateX(-60rem);
+  }
+  100%{
+    transform: translateX(0rem);
+  }
 }
 .about_us .au_p .heading {
   font-weight: lighter;
@@ -258,15 +366,82 @@ header ul a:active {
 }
 .about_us .au_diagram .au_maindiagram1 {
   background-color: grey;
+  animation: au_maindiagram1 3.5s forwards;
+  animation-delay: 0.1;
+}
+@keyframes au_maindiagram1{
+  0%{
+    transform: scale(-1 ,-1);
+    opacity: 0;
+
+  }
+  50%{
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  100%{
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 .about_us .au_diagram .au_maindiagram2 {
   background-color: #2abbca;
+  animation:au_maindiagram2 2s  forwards ;
+  animation-delay: 0.08s;
+}
+@keyframes au_maindiagram2{
+  0%{
+    transform: scale(0 ,0);
+    opacity: 0;
+
+  }
+  50%{
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  100%{
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 .about_us .au_diagram .au_maindiagram3 {
   background-color: #2abbca;
+  animation:au_maindiagram3 2s  forwards ;
+  animation-delay: 0.05;
+}
+@keyframes au_maindiagram3{
+  0%{
+    transform: scale(0 ,0);
+    opacity: 0;
+
+  }
+  50%{
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  100%{
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 .about_us .au_diagram .au_maindiagram4 {
   background-color: #e5521d;
+  animation:au_maindiagram4 2s forwards ;
+}
+@keyframes au_maindiagram4{
+  0%{
+    transform: scale(0 ,0);
+    opacity: 0;
+
+  }
+  50%{
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  100%{
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 .experience {
   min-height: 100vh;
@@ -461,29 +636,28 @@ header ul a:active {
 }
 .contact .phone {
   background-color: white;
-  padding: 2.5rem;
-  /*   display: flex;
-  flex-flow: column wrap; */
-  /*   row-gap: 1rem; */
+  padding: 2rem;
+  
 }
 .contact .phone h1 {
   font-size: 3rem;
 }
 .contact .phone p {
-  font-size: 1.2rem;
-  /*   border-bottom: 1px black solid; */
-  /*   margin-bottom: 1rem; */
-}
-.contact .phone li:first-child {
-  list-style-image: url(img/icons8-location-pin-48.png);
-  list-style-position: outside;
-}
-.contact .phone li:last-child {
-  list-style-image: url(img/icons8-phone-64.png);
+  font-size: 1rem;
+  font-style: italic;
 }
 
-.contact .phone ul {
-  padding-left: 2rem;
+.contact .phone li:first-child{
+  list-style-image: url(img/icons8-location-pin-48.png);
+  list-style-position: inside;
+
+ 
+}
+.contact .phone li:last-child{
+  list-style-image: url(img/icons8-phone-64.png);
+  list-style-position: inside;
+
+ 
 }
 
 .contact .message {
@@ -508,8 +682,15 @@ header ul a:active {
 .contact .message input::placeholder {
   padding: 1.4rem;
 }
-.contact .message input textarea {
-  word-wrap: break-word;
+.contact .message .submit{
+  background-color:#e5521d;
+  color: white;
+  height:4rem;
+  font-size: 1.4rem;
+}
+.contact .message .submit:hover ,.contact .message .submit:focus{
+  opacity: 0.7;
+
 }
 .contact .message .terms {
   display: flex;
