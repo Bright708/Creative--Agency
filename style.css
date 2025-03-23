@@ -464,6 +464,16 @@ flex-flow: column wrap;
   border-radius: 5%;
   position: absolute;
   left: 19rem;
+  animation: box_experience1 2.5s forwards;
+}
+@keyframes box_experience1{
+  0%{
+    transform: translateX(-60rem);
+  }
+  100%{
+    transform: translateX(0rem);
+  }
+
 }
 .experience .box_experience2 {
   background-color: whitesmoke;
@@ -475,6 +485,16 @@ flex-flow: column wrap;
   border-radius: 5%;
   position: absolute;
   right: 19rem;
+  animation: box_experience2 2s forwards;
+}
+@keyframes box_experience2{
+  0%{
+    transform: translateX(60rem);
+  }
+  100%{
+    transform: translateX(0rem);
+  }
+
 }
 .experience .box_experience2 img {
   height: 4rem;
@@ -497,6 +517,16 @@ flex-flow: column wrap;
 .word_experience1 {
   position: absolute;
   left: 19rem;
+  animation: word_experience1 3s forwards;
+  animation-delay: 0.09s;
+}
+@keyframes word_experience1{
+  0%{
+    transform:translateX(-60rem) ;
+  }
+ 100%{
+    transform:translateX(0rem) ;
+  }
 }
 .word_experience1 h1 {
   font-size: 2rem;
@@ -510,6 +540,20 @@ flex-flow: column wrap;
 .word_experience2 h1 {
   font-size: 1.5rem;
   color: #e5521d;
+  animation: word_experience2 2.5s forwards ;
+}
+.word_experience2 p {
+  animation: word_experience2 2.6s forwards 0.05s ;
+  
+}
+@keyframes word_experience2{
+  0%{
+    transform: translateX(60rem);
+    opacity: 0.4;
+  }
+  100%{
+    transform: translateX(0rem);
+  }
 }
 .word_experience2 .btn {
   height: 50px;
@@ -521,7 +565,18 @@ flex-flow: column wrap;
   background-color: black;
   border-radius: 50px;
   border: none;
+  animation: button 1.8s forwards;
 }
+@keyframes button{
+  0%{
+    transform: translateY(15rem);
+   
+  }
+  100%{
+    transform: translateY(0rem);
+  }
+}
+
 .word_experience2 .btn:hover,
 .word_experience2 .btn:focus {
   background-color: #e5521d;
@@ -540,6 +595,16 @@ flex-flow: column wrap;
   top: 2rem;
   font-size: 2.5rem;
   color: white;
+  animation: customer_header 1.8s forwards;
+}
+@keyframes customer_header{
+  0%{
+    transform:translateY(-4rem);
+    opacity: 0;
+  }
+  100%{
+    transform:translateY(0rem);
+  }
 }
 .customers article {
   width: 100%;
@@ -549,6 +614,16 @@ flex-flow: column wrap;
   align-items: center;
   flex-flow: row wrap;
   column-gap: 2rem;
+  animation: customer_article 2.5s forwards;
+}
+@keyframes customer_article{
+  0%{
+    transform:translateX(60rem);
+    opacity: 0;
+  }
+  100%{
+    transform:translateX(0rem);
+  }
 }
 .customers .testimony {
   width: 600px;
@@ -590,6 +665,16 @@ flex-flow: column wrap;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+  transition: all 2s;
+  animation: ideas 2s forwards;
+}
+@keyframes ideas{
+  0%{
+    transform: scale(1.2);
+  }
+  100%{
+    transform: scale(1);
+  }
 }
 .ideas article {
   position: absolute;
@@ -637,7 +722,16 @@ flex-flow: column wrap;
 .contact .phone {
   background-color: white;
   padding: 2rem;
+  animation: phone 2s forwards;
   
+}
+@keyframes phone{
+  0%{
+    transform: translateX(-60rem);
+  }
+  100%{
+    transform: translateX(0rem);
+  }
 }
 .contact .phone h1 {
   font-size: 3rem;
@@ -663,6 +757,15 @@ flex-flow: column wrap;
 .contact .message {
   background-color: #2abbca;
   padding: 1.5rem;
+  animation: message 2s forwards;
+}
+@keyframes message{
+  0%{
+    transform: translateX(60rem);
+  }
+  100%{
+    transform: translateX(0rem);
+  }
 }
 .contact .message h1 {
   display: grid;
